@@ -1,0 +1,3 @@
+GET /person/:id     controllers.api.PersonController.find(id:Long)
+POST /person        controllers.api.PersonController.create()
+POST /authenticate  controllers.api.AuthController.authenticate()

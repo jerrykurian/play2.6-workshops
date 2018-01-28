@@ -1,0 +1,5 @@
+GET /person/:id     controllers.api.PersonController.find(id:Long)
+POST /person        controllers.api.PersonController.create()
+
+GET /customer/:id     controllers.api.CustomerController.find(id:String)
+POST /customer        controllers.api.CustomerController.create()

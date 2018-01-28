@@ -1,0 +1,11 @@
+@(personForm: Form[model.Person], id:Long)(implicit req: RequestHeader,
+    message:Messages)
+@import helper._
+@helper.form(action = web.routes.PersonController.modify(id)) {
+    @helper.CSRF.formField
+    <input type="hidden" name="id"
+           value="@personForm.data.get("id")" />
+    @helper.inputText(personForm("firstName"))
+    @helper.inputText(personForm("lastName"))
+    <button>Create User</button>
+}
